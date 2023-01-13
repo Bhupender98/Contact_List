@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+    <head>
+        <title>
+            <%= locals.title %>
+        </title>
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    </head>
+    <body>
+        <h1>Contact List</h1>
+        <div class="container">
+            <form action="/create-contact" method="post" id="form-container">
+                <input type="text" name="name" required placeholder="Enter Name ">
+                <input type="number" name="phone" required placeholder="Enter Phone Number">
+                <button type="submit">Add Contact</button>
+            </form>
+        <ul>
+            <% for( item of contact_List) { %>
+                <li>
+                    <div class="ul-contact-list">
+                    <div class="contact-list">
+                        <p><%= item.name %></p>
+                        <p><%= item.phone %></p>
+                    </div>
+                    <!-- for query params  -->
+                    <a href="/delete-contact/?id=<%= item._id %>"><i class="fa fa-times-circle"></i></a>
+                    
+                    <!-- for string params  -->
+                    <!-- <a href="/delete-contact/<%= item.phone %>">Delete</a> -->
+                    </div>
+                </li>
+            <% } %>
+        </ul>
+        </div>
+    </body>
+</html>

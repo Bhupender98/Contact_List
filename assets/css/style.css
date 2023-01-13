@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: red; */
+}
+.container{
+    height: auto;
+    width: 40vw;
+    margin: auto;
+    border: 1px solid lightgray;
+    padding: 1rem;
+}
+h1{
+    text-align: center;
+    margin: 2rem 0;
+    background-color: cyan;
+    padding: 0.4rem;
+}
+/* styling form  */
+.container form{
+    margin-bottom: 1rem;
+}
+#form-container{
+    display: flex;
+    justify-content: space-between;
+}
+#form-container input{
+    outline: none;
+    border: none;
+    margin-left: 10px;
+    border-bottom: 2px solid gray;
+    padding: 3px 0;
+}
+#form-container button{
+    padding: 0.2rem 0.4rem;
+    border: 1px solid lightgray;
+    margin-left: 1rem;
+}
+.container ul{
+    list-style: none;
+}
+.container ul li{
+    width: 100%;
+    background-color: rgb(63, 63, 255);
+    border-bottom: 3px solid #ffff;
+
+}
+.contact-list{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ffff;
+}
+.ul-contact-list{
+    display: flex;
+    align-items: center;
+}
+.ul-contact-list a{
+    color: red;
+}
